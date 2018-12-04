@@ -22,7 +22,7 @@ public class UserController {
     }
 
     private int dbBalance(String id) {
-        String url = "http://localhost:8079/balance/" + id;
+        String url = "https://userdb438.herokuapp.com/balance/" + id;
         // Create the request body as a MultiValueMap
         MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
         HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(body, null);
@@ -44,7 +44,7 @@ public class UserController {
     }
 
     private boolean dbVerifyPurchase(String id, String amount) {
-        String url = "http://localhost:8079/verify/funds/" + id + "/" + amount;
+        String url = "https://userdb438.herokuapp.com/verify/funds/" + id + "/" + amount;
         // Create the request body as a MultiValueMap
         MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
         HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(body, null);
@@ -67,7 +67,7 @@ public class UserController {
     }
 
     private String dbLogin(String username) {
-        String url = "http://localhost:8081/login";
+        String url = "https://userdb438.herokuapp.com/login";
         // Create the request body as a MultiValueMap
         MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
         body.add("username", username);
